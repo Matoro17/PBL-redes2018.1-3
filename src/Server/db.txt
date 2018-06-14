@@ -1,0 +1,2 @@
+0;4;Notebook Dell;3000.00
+1;2;Notebook HP;2500.00

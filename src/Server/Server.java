@@ -18,8 +18,6 @@ import javafx.fxml.FXMLLoader;
 
 
 public class Server extends Application {
-	@FXML
-	private Label label;
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -36,18 +34,6 @@ public class Server extends Application {
 	
 	public static void main(String[] args) {
 		launch(args);
-		try {
-            String nomeServico = "MeuServico";
-            int porta = 12345;
-
-            Service servico = new Implement();
-            Service servicoDistribuido = (Service) UnicastRemoteObject.exportObject(servico, 0);
-
-            Registry registry = LocateRegistry.createRegistry(porta);
-            registry.bind(nomeServico, servicoDistribuido);
-            System.out.printf("Servico disponivel: %s%n", nomeServico);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+		
 	}
 }

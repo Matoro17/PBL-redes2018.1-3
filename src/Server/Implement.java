@@ -39,6 +39,7 @@ public class Implement implements Service{
 		if(estoque.get(idProduto).getQuantidade()>0) {
 			estoque.get(idProduto).setQuantidade(estoque.get(idProduto).getQuantidade()-1);
 			atualizar(idProduto, -1);
+			return true;
 		}
 		return false;
 	}

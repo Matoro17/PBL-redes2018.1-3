@@ -11,6 +11,6 @@ public interface ServicoListener extends Remote {
     void adicaoProduto(int id, Produto produto) throws RemoteException;
     //void atualizarTxt(String arquivo, int quantidade);
     //void atualizar(String dados);
-	void atualizarQuantidadeLocal(int idProduto, int i);
+	void atualizarQuantidadeLocal(int idProduto, int i) throws RemoteException;
     
 }

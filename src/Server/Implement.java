@@ -44,7 +44,7 @@ public class Implement implements Service{
 		return false;
 	}
 
-	private void atualizar(int idProduto, int i) {
+	private void atualizar(int idProduto, int i) throws RemoteException {
 		for (ServicoListener listener : listeners) {
             listener.atualizarQuantidadeLocal(idProduto, i);
         }
@@ -54,6 +54,11 @@ public class Implement implements Service{
 	public void adicaoProduto(int idProduto, int Quatidade) throws RemoteException {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public HashMap<Integer, Produto> getEstoque() throws RemoteException {
+		return this.estoque;
 	}
 
 

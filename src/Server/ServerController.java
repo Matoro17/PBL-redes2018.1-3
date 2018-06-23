@@ -23,10 +23,13 @@ public class ServerController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		/*
-		 * try { carregarArquivo(); } catch (FileNotFoundException e1) {
-		 * System.out.println("arquivo não carregado"); e1.printStackTrace(); }
-		 */
+		
+		try { 
+			carregarArquivo(); 
+		} catch (FileNotFoundException e1) {
+		 System.out.println("arquivo não carregado"); e1.printStackTrace(); 
+		 }
+		 
 		try {
 			String nomeServico = "MeuServico";
 			int porta = 12345;

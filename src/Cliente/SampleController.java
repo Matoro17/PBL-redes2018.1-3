@@ -36,6 +36,11 @@ public class SampleController implements ServicoListener, Initializable {
 		System.out.println(name);
 
 	}
+	
+	@FXML
+	private void recarregar(ActionEvent event){
+		
+	}
 
 	@FXML
 	private void text(ActionEvent event) {
@@ -67,7 +72,13 @@ public class SampleController implements ServicoListener, Initializable {
 			ciclo = new Cicle(nomeServico, porta, clienteAdistribuido);
 			new Thread(ciclo).start();
 		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
+			title.setText("Nao foi possivel conectar ao server");
+			e.printStackTrace();
+		}
+		try {
+			this.estoque = ciclo.getServicoRemoto().getEstoque();
+			atualizarBdtext();
+		} catch (RemoteException e) {
 			e.printStackTrace();
 		}
 	}
@@ -91,7 +102,7 @@ public class SampleController implements ServicoListener, Initializable {
 	}
 
 	public void atualizarBdtext() {
-		File db = new File("db.txt");
+		File db = new File("dbcli.txt");
 		try {
 
 			FileWriter fileW = new FileWriter(db);

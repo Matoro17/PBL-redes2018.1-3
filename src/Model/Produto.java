@@ -1,44 +1,52 @@
-package Model;
+package model;
 
 public class Produto {
-	private int ID,quantidade;
-	private String Nome;
-	private float preco;
+    private int id;
+    private String nome;
+    private int quantidade;
+    private double valor;
 
-	public Produto(int ID, int quantidade, String Nome, float preco) {
-		// TODO Auto-generated constructor stub
-	}
+    public Produto(int id, String nome, double valor, int quantidade) {
+        setId(id);
+        setNome(nome);
+        setQuantidade(quantidade);
+        setValor(valor);
+    }
 
-	public int getID() {
-		return ID;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setID(int iD) {
-		ID = iD;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public int getQuantidade() {
-		return quantidade;
-	}
+    public String getNome() {
+        return nome;
+    }
 
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
-	}
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-	public String getNome() {
-		return Nome;
-	}
+    public int getQuantidade() {
+        return quantidade;
+    }
 
-	public void setNome(String nome) {
-		Nome = nome;
-	}
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
 
-	public float getPreco() {
-		return preco;
-	}
+    public double getValor() {
+        return valor;
+    }
 
-	public void setPreco(float preco) {
-		this.preco = preco;
-	}
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
 
+    @Override
+    public String toString() {
+        return String.format("Id: %-6d\tNome: %-20s\tQuantidade: %-6d\tValor: %-7.2f\n", getId(), getNome(), getQuantidade(), getValor());
+    }
 }

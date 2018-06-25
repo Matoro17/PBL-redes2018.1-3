@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ProjetoDora:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ProjetoDora_jar</output-path>
+    <root id="archive" name="ProjetoDora.jar">
+      <element id="module-output" name="ProjetoDora" />
+    </root>
+  </artifact>
+</component>

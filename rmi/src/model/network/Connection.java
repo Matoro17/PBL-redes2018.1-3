@@ -1,10 +1,10 @@
 package model.network;
 
-import model.Register;
+import model.Logger;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface Connection extends Remote {
-    boolean updateRegister(Register register) throws RemoteException;
+    boolean updateRegister(Logger logger) throws RemoteException;
 }

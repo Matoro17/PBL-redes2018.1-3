@@ -1,15 +1,10 @@
-1,Produto 1,10
-2,Produto 2,10
-3,Produto 3,10
-4,Produto 4,10
-5,Produto 5,10
-6,Produto 6,10
-7,Produto 7,10
-8,Produto 8,10
-9,Produto 9,10
-10,Produto 10,10
-11,Produto 11,10
-12,Produto 12,10
-13,Produto 13,10
-14,Produto 14,10
-15,Produto 15,10
+1,NoteBook Dell,10
+2,NoteBook HP,10
+3,Desktop i7,10
+4,No-break full power pack,10
+5,Mouse gamer Razer,10
+6,Fone de ouvido Manasséis,10
+7,Roteador wi-fi 150m,10
+8,Monitor LG,10
+9,HD 1TB,10
+10,Memoria RAM DDR4,10

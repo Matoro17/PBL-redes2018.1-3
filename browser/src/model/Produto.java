@@ -2,11 +2,11 @@ package model;
 
 import java.io.Serializable;
 
-public class Product implements Serializable {
+public class Produto implements Serializable {
     private String name;
     private Logger logger;
 
-    public Product(String name, Logger logger) {
+    public Produto(String name, Logger logger) {
         this.setName(name);
         this.setLogger(logger);
     }

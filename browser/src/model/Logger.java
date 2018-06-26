@@ -2,11 +2,11 @@ package model;
 
 import java.io.Serializable;
 
-public class Register implements Serializable {
+public class Logger implements Serializable {
     private Integer id;
     private Integer amount;
 
-    public Register(int id, int amount) {
+    public Logger(int id, int amount) {
         this.setId(id);
         this.setAmount(amount);
     }

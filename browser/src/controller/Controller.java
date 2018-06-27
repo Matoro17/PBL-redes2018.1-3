@@ -6,8 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import model.Produto;
-import model.Logger;
+import model.Product;
+import model.Register;
 import model.network.Purchase;
 
 import java.net.InetAddress;
@@ -17,17 +17,17 @@ import java.rmi.registry.Registry;
 public class Controller {
     @FXML private TextField address, amount;
     @FXML private Label message;
-    @FXML private ListView<Produto> list;
+    @FXML private ListView<Product> list;
     @FXML private Button search, buy;
-    private Produto[] produtos;
+    private Product[] products;
 
     public void search() {
         Purchase purchase = connect();
 
         if (purchase != null) {
             try {
-                produtos = purchase.getProducts();
-                list.setItems(FXCollections.observableArrayList(produtos));
+                products = purchase.getProducts();
+                list.setItems(FXCollections.observableArrayList(products));
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -38,14 +38,14 @@ public class Controller {
         if (!amount.getText().isEmpty() && amount.getText().matches("^[1-9]+") &&
                 list.getSelectionModel().getSelectedIndex() >= 0) {
 
-            int id = produtos[list.getSelectionModel().getSelectedIndex()].getLogger().getId();
+            int id = products[list.getSelectionModel().getSelectedIndex()].getRegister().getId();
             int value = Integer.parseInt(amount.getText());
-            Logger logger = new Logger(id, value);
+            Register register = new Register(id, value);
             Purchase purchase = connect();
 
             if (purchase != null) {
                 try {
-                    if (purchase.buyProduct(logger)) {
+                    if (purchase.buyProduct(register)) {
                         search();
                         message.setText("Success");
                     } else {
@@ -75,7 +75,7 @@ public class Controller {
             e.printStackTrace();
         }
 
-        message.setText("Servidor não encontrado");
+        message.setText("Server not found");
         return null;
     }
 }

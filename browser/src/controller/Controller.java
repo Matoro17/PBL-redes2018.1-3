@@ -13,14 +13,18 @@ import model.network.Purchase;
 import java.net.InetAddress;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-
+/*
+    Classe controladora da interface do cliente
+ */
 public class Controller {
     @FXML private TextField address, amount;
     @FXML private Label message;
     @FXML private ListView<Product> list;
     @FXML private Button search, buy;
     private Product[] products;
-
+    /*
+        Metodo para checagem se o determinado endereço de IP existe para ser acessado
+     */
     public void search() {
         Purchase purchase = connect();
 
@@ -33,7 +37,9 @@ public class Controller {
             }
         }
     }
-
+    /*
+        Metodo de compra, no qual pega a quantidade digitada e o produto selecionado e é feito uma tentativa de autenticar a compra nos servidores
+     */
     public void buy() {
         if (!amount.getText().isEmpty() && amount.getText().matches("^[1-9]+") &&
                 list.getSelectionModel().getSelectedIndex() >= 0) {
@@ -57,7 +63,9 @@ public class Controller {
             }
         }
     }
-
+    /*
+        Metodo para se conectar a um servidor
+     */
     private Purchase connect() {
         list.getItems().clear();
         message.setText("");

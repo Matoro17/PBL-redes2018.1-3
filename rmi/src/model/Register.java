@@ -1,7 +1,9 @@
 package model;
 
 import java.io.Serializable;
-
+/*
+    Classe de registro, a qual armazena alterações do sistema
+ */
 public class Register implements Serializable {
     private Integer id;
     private Integer amount;

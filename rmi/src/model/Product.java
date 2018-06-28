@@ -1,7 +1,9 @@
 package model;
 
 import java.io.Serializable;
-
+/*
+    Classe do produto carregado no sistema
+ */
 public class Product implements Serializable {
     private String name;
     private Register register;

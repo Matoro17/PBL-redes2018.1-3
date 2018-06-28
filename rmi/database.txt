@@ -1,5 +1,5 @@
 1,NoteBook Dell,10
-2,NoteBook HP,10
+2,NoteBook HP,6
 3,Desktop i7,10
 4,No-break full power pack,10
 5,Mouse gamer Razer,10

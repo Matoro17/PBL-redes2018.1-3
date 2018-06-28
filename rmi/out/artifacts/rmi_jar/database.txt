@@ -1,0 +1,11 @@
+1,NoteBook Dell,10
+2,NoteBook HP,10
+3,Desktop i7,10
+4,No-break full power pack,10
+5,Mouse gamer Razer,10
+6,Fone de ouvido Manasséis,10
+7,Roteador wi-fi 150m,10
+8,Monitor LG,10
+9,Memoria RAM DDR4,10
+10,HD 1TB,10
+11,SSD 120GB,10
